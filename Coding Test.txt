@@ -1,0 +1,118 @@
+
+1. Write a Java program that takes an integer input representing the number of rows and prints a pyramid pattern of numbers as shown below:
+
+enter the number of rows for the pyramid:5
+            1
+          2   3 
+        4   5   6
+     7    8   9   10
+  11   12   13  14   15
+
+Source code:
+
+import java.util.*;
+public class Piramid {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of rows of pyramid ");
+		int nr=sc.nextInt();
+		int cn=1;
+		
+		for(int i=1;i<=nr;i++)
+		    {
+			for(int j=1;j<=nr-1;j++)
+			{
+				System.out.print(" ");
+			}
+			for(int j=1;j<=i;j++)
+			{
+				System.out.println(cn + "\t\t");
+				cn++;
+			}
+			System.out.println(" ");			
+		}
+		System.out.println("Jangam Pavithra Reddy");
+		
+	}
+
+}
+    
+Output:
+enter the number of rows for the pyramid:5
+            1
+          2   3 
+        4   5   6
+     7    8   9   10
+  11   12   13  14   15
+
+
+
+2. Given an array of integers, write a Java program to find and print all the duplicate elements.
+
+Source code:
+
+import java.util.*;
+public class duplicates 
+{
+	public static void main(String[] args) 
+  	{
+    		int a[]={1,2,3,4,5,6,74,3,2,1};
+    		System.out.println("Duplicate numbers in the array are :");
+    		for(int i=0;i<a.length;i++)	//comparing element
+    		{
+      			for(int j=i+1;j<a.length;j++)    //element of comparision
+		    	{
+		        	if(a[i]==a[j])		//checking for duplicate elements 
+		        	System.out.println(a[j]);	//printing the duplicate element
+		    	}
+		}
+	System.out.println("Jangam Pavithra Reddy");	
+	}
+
+}
+
+Output:
+Duplicate numbers in the array are :
+1
+2
+3
+
+
+3. Write a Java function to check if two strings are anagrams of each other. 
+Note - An anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, act and tac are an anagram of each other.
+
+Source code:
+
+import java.util.*;
+public class anagram {
+
+	public static void main(String[] args)
+		String a="act";
+		String b="tac";
+		int i=0,t=0;
+		if(a.length()==b.length()){
+	    	char[] ch1=a.toCharArray();
+		char[] ch2=b.toCharArray();
+	
+		Arrays.sort(ch1);
+		Arrays.sort(ch2);
+		boolean rs=Arrays.equals(ch1,ch2);
+		if(rs)
+			System.out.println("Anagrams");
+		else
+			System.out.println("Not Anagrams");
+		}
+		System.out.println("Jangam Pavithra Reddy");
+    }
+}
+
+
+Output:
+Anagrams
+Jangam Pavithra Reddy
+
+
+
+
+
